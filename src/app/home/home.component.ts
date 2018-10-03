@@ -20,4 +20,11 @@ export class HomeComponent implements OnInit {
 
   }
 
+  onLoadServer(id: number){
+    // some processing
+    // now we want to navigate to somewhere else
+    this.router.navigate(['/servers', id, 'edit'], { queryParams: { allowEdit: '1'}, fragment: "loading"}); // remember to give a absolute path..
+
+  }
+
 }
